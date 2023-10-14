@@ -1,0 +1,16 @@
+[Application]
+Name = "WBTech0"
+Version = "1.0.0"
+
+[DB]
+Name = "postgres"
+Host = "192.168.31.158"
+Port = "5436"
+Schema = "public"
+MaxPoolSize = 10
+
+[HttpServer]
+ShutdownTimeout = 5
+Addr = "3333"
+[Nats]
+URL = "192.168.31.158:4222"

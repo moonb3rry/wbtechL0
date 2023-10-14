@@ -1,0 +1,20 @@
+version: '4'
+
+services:
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5436:5432"
+    volumes:
+      - ./volumes/pgdata:/var/lib/postgresql/data
+
+  nats:
+    image: nats-streaming:latest
+    ports:
+      - "4222:4222"
+    restart: always
